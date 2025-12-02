@@ -1,0 +1,59 @@
+{
+  "name": "sentry-cli",
+  "version": "0.0.0",
+  "description": "A powerful command-line interface for Sentry API interaction with support for issues, events, projects, and multiple output formats",
+  "main": "dist/index.js",
+  "bin": {
+    "sentry-cli": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/index.ts",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "find-deadcode": "ts-prune",
+    "format": "eslint --cache --fix --quiet . && prettier --write --cache .",
+    "pre-commit": "npm run format && npm run find-deadcode"
+  },
+  "keywords": [
+    "sentry",
+    "cli",
+    "error-tracking"
+  ],
+  "author": "Hesed",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@toon-format/toon": "^2.0.1",
+    "axios": "^1.7.9",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.9",
+    "@vitest/ui": "^4.0.9",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "prettier": "3.7.1",
+    "ts-prune": "^0.10.3",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^4.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesedcasa/sentry-cli.git"
+  },
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/hesedcasa/sentry-cli/issues"
+  },
+  "homepage": "https://github.com/hesedcasa/sentry-cli#readme"
+}
