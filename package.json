@@ -1,6 +1,6 @@
 {
   "name": "sentry-api-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A powerful command-line interface for Sentry API interaction with support for issues, events, projects, and multiple output formats",
   "main": "dist/index.js",
   "bin": {
